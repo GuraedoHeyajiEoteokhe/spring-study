@@ -435,7 +435,7 @@ public interface MemberRepositiory extends JpaRepository<Member,Long> {}
 
 [test → resources] 에 아래 사진과 같이 .sql 파일을 추가해주자.
 
-![jpamethod1.png](jpamethod1.png)
+![jpamethod1.png](img/jpamethod1.png)
 
 ```sql
 INSERT INTO member (id, name) VALUES (1, 'name 1')
@@ -447,7 +447,7 @@ INSERT INTO member (id, name) VALUES (3, 'name 3')
 
 [test → resources] 에 application.yml을 추가하여 아래와 같이 세팅해주자.
 
-![img.png](img.png)
+![img.png](img/img.png)
 
 ```sql
 spring:
@@ -484,7 +484,7 @@ class MemberRepositoryTest {
 
 members = memberRepository.findAll() 이 잘 작동했는지 test를 통해 확인한다.
 
-![img_1.png](img_1.png)
+![img_1.png](img/img_1.png)
 
 5단계:
 
@@ -573,7 +573,7 @@ public interface MemberRepository extends JpaRepository<Member, Long> {
 		Optional<Member> findByName(String name);
 }
 ```
-![img_3.png](img_3.png)
+![img_3.png](img/img_3.png)
 
 리포지토리는 엔티티 CRUD할 때 사용하는 인터페이스로, JpaRepository 인터페이스를 상속받아 간단히 구현할 수 있다.
 
